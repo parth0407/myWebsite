@@ -7,29 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-fixed-top navbar-default">
-    <div class="container">
-      <%= link_to "BazaarFeeds", "", class: "btn btn-lg btn-success", id: "logo" %>
-      <div class="nav_item">
-        <%= link_to "CLOTHING", "", class: "btn btn-default btn-warning" %>
-      </div>
-      <div class="nav_item">
-        <%= link_to "SHOES", "", class: "btn btn-default btn-warning" %>
-      </div>
-      <div class="nav_item">
-        <%= link_to "ACCESSORIES", "", class: "btn btn-default btn-warning" %>
-      </div>
-      <div class="nav_item">
-        <%= link_to "SALE", "", class: "btn btn-default btn-warning" %>
-      </div>
-      
-    </div>
-  </header>
+  <%= render 'layouts/navigation' %>
   <div class ="container">
       <%= yield %>
-      <div class="footer">
-        <p>&copy; BazaarFeeds 2015</p>
-      </div>
+      <%= render 'layouts/footer' %>
       
   </div>
 </body>
